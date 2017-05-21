@@ -14,7 +14,6 @@ std::map<char, int> findDuplicateCharacters(std::string string)
     int stringLength = string.length();
 
     for (int i = 0;i < stringLength;i++) {
-        bool  check = true;
         if (checkedCharacters[string[i]]) {
             continue;
         }
