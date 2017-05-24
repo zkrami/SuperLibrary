@@ -6,25 +6,25 @@ public class LongestPalindrome {
     /**
      * Finds the longest palindrome in a given string
      *
-     * @param str a given string in which the longest palindrome must be found
-     * @return String
+     * @param string str
+     * @return string
      */
-    public String findLongestPalindrome(String str) {
+    public string findLongestPalindrome(string str) {
         IsPalindrome isPalindrome = new IsPalindrome();
 
         if (isPalindrome.isPalindromeIteration(str)) {
             return str;
         }
 
-        int stringLength = str.length();
-        String longestPalindrome = "";
+        int stringLength = str.Length;
+        string longestPalindrome = "";
         int longestPalindromeLength = 1;
 
         for (int start = 0;start < stringLength - 1;start++) {
-            for (int end = start + 3;end < stringLength + 1;end++) {
-                String subString = str.substring(start, end);
+            for (int subStringLength = start + 2;subStringLength < stringLength - start + 1;subStringLength++) {
+                string subString = str.Substring(start, subStringLength);
                 if (isPalindrome.isPalindromeIteration(subString)) {
-                    int tempSubStringLength = subString.length();
+                    int tempSubStringLength = subString.Length;
                     if (tempSubStringLength > longestPalindromeLength) {
                         longestPalindrome = subString;
                         longestPalindromeLength = tempSubStringLength;
@@ -34,7 +34,7 @@ public class LongestPalindrome {
         }
 
         if (longestPalindromeLength == 1) {
-            return String.valueOf(str.charAt(0));
+            return str[0].ToString();
         }
 
         return longestPalindrome;

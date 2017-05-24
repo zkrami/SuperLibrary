@@ -6,7 +6,7 @@
  * @param char *string 
  * @return bool
  */
-bool isPalindrom(char *string)
+bool isPalindromeIteration(char *string)
 {
     int length = strlen(string);
 

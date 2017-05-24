@@ -11,7 +11,7 @@ public class IsPalindrome
     * @param String str
     * @return bool
     */
-    public bool isPalindrome(string str)
+    public bool isPalindromeRecursion(string str)
     {
         if (str.Length < 2) {
             return true;
@@ -21,6 +21,6 @@ public class IsPalindrome
             return false;
         }
 
-        return isPalindrome(str.Substring(1, str.Length - 2));
+        return isPalindromeRecursion(str.Substring(1, str.Length - 2));
     }
 }
