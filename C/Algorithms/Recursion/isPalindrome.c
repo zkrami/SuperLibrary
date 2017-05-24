@@ -6,7 +6,7 @@
  * @param char *string 
  * @return int
  */
-int isPalindrome(char *string)
+int isPalindromeRecursion(char *string)
 {
     int length = strlen(string);
 
@@ -24,5 +24,5 @@ int isPalindrome(char *string)
         subString[i - 1] = string[i];
     }
 
-    return isPalindrome(subString);
+    return isPalindromeRecursion(subString);
 }

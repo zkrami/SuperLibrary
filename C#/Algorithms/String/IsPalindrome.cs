@@ -11,7 +11,7 @@ public class IsPalindrome
     * @param String str
     * @return bool
     */
-    public bool isPalindrome(string str)
+    public bool isPalindromeIteration(string str)
     {
         int length = str.Length;
 

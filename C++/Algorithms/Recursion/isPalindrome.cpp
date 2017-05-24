@@ -6,7 +6,7 @@
  * @param string string
  * @return bool
  */
-bool isPalindrom(std::string string)
+bool isPalindromeRecursion(std::string string)
 {
     if (string.length() < 2) {
         return true;
@@ -16,5 +16,5 @@ bool isPalindrom(std::string string)
         return false;
     }
 
-    return isPalindrom(string.substr(1, string.length() - 2));
+    return isPalindromeRecursion(string.substr(1, string.length() - 2));
 }

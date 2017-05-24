@@ -1,15 +1,15 @@
 /**
- * Class isPalindrome
+ * Class IsPalindrome
  */
-public class isPalindrome {
+public class IsPalindrome {
 
     /**
      * Checks if a string is palindrome using recursion
      *
-     * @param String str
+     * @param str a given string that must be checked for palindrome
      * @returns boolean
      */
-    public boolean isPalindrome(String str) {
+    public boolean isPalindromeRecursion(String str) {
         if (str.length() < 2) {
             return true;
         }
@@ -18,6 +18,6 @@ public class isPalindrome {
             return false;
         }
 
-        return isPalindrome(str.substring(1, str.length() - 1));
+        return isPalindromeRecursion(str.substring(1, str.length() - 1));
     }
 }
