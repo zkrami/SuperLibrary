@@ -1,15 +1,15 @@
 /**
- * Class isPalindrome
+ * Class IsPalindrome
  */
-public class isPalindrome {
+public class IsPalindrome {
 
     /**
      * Checks if a string is palindrome using iteration
      *
-     * @param String str
+     * @param str a given string that must be checked for palindrome
      * @returns boolean
      */
-    public boolean isPalindrome(String str) {
+    public boolean isPalindromeIteration(String str) {
         int length = str.length();
 
         for (int i = 0, j = length - 1;i <= length / 2 && j >= length / 2;i++, j--) {

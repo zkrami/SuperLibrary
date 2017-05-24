@@ -5,15 +5,15 @@ public class ReverseString {
     /**
      * Reverses the given string
      *
-     * @param String string
+     * @param str a given string that must be reversed
      * @return String
      */
-    public String reverseString(String string) {
+    public String reverseString(String str) {
         String reverseString = "";
-        int length = string.length();
+        int length = str.length();
 
         for (int i = length - 1;i > -1;i--) {
-            reverseString += string.charAt(i);
+            reverseString += str.charAt(i);
         }
 
         return reverseString;
