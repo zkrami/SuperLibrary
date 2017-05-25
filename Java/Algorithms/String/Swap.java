@@ -10,7 +10,7 @@ public class Swap {
      * @param j the index of the second character
      * @return String
      */
-    public static String swa(String str, int i, int j) {
+    public String swap(String str, int i, int j) {
         return str.substring(0, i) +
                str.charAt(j) +
                str.substring(i + 1, j) +
