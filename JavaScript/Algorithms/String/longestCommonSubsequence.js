@@ -1,5 +1,5 @@
 /**
- * Rreturns the length of the longest common subsequence of two strings
+ * Returns the length of the longest common subsequence of two strings
  *
  * @param {string} firstString
  * @param {string} secondString
