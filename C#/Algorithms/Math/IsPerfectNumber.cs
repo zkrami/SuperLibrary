@@ -6,10 +6,10 @@ public class IsPerfectNumber {
     /**
      * Checks if a given number is perfect number
      *
-     * @param number a given number
-     * @return boolean
+     * @param int number
+     * @return bool
      */
-    public boolean isPerfectNumber(int number) {
+    public bool isPerfectNumber(int number) {
         int divisorsSum = 0;
 
         for (int i = 1;i <= number / 2;i++) {
