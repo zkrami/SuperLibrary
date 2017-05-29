@@ -6,10 +6,10 @@ public class IsPerfectSquare {
     /**
      * Checks if a given number is perfect square
      *
-     * @param number a given number
-     * @return boolean
+     * @param int number
+     * @return bool
      */
-    public boolean isPerfectSquare(int number) {
+    public bool isPerfectSquare(int number) {
         int i = 0;
         while (i * i < number) {
             i++;
