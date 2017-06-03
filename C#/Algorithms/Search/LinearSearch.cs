@@ -7,14 +7,14 @@ public class LinearSearch {
      * Implements Linear Search algorithm
      *
      * @param array array
-     * @param int searchingElement
+     * @param int targetElement
      * @returns int
      */
-    public int linearSearch(int[] array, int searchingElement) {
+    public int linearSearch(int[] array, int targetElement) {
         int arrayLength = array.Length;
 
         for (int i = 0;i < arrayLength;i++) {
-            if (array[i] == searchingElement) {
+            if (array[i] == targetElement) {
                 return i;
             }
         }
