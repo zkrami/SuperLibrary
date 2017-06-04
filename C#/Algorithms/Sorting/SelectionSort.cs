@@ -3,19 +3,19 @@
  */
 public class SelectionSort {
 
-    public static final int ASC_ORDERING = 0;
-    public static final int DESC_ORDERING = 1;
+    public const int ASC_ORDERING = 0;
+    public const int DESC_ORDERING = 1;
 
     /**
      * Implements Selection sort
      *
-     * @param array a given array
-     * @param ordering a given integer specifying the ordering of the array
+     * @param int[] array
+     * @param int ordering
      * @return int|array
      */
     public int[] selectionSort(int[] array, int ordering)
     {
-        int length = array.length;
+        int length = array.Length;
 
         for (int i = 0;i < length;i++) {
             int min = i;
