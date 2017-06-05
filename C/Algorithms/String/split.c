@@ -1,4 +1,4 @@
-#include <string.h>
+#include "string.h"
 
 /**
  * Splits string into array
@@ -10,31 +10,31 @@
  */
 void split(char *string, char delimiter, char *words[])
 {
-    int i = 0, j = 0, k = 0;
-    while (string[i] != '\0') {
-        if (string[i] == delimiter) {
-            char *subString;
+    int i = -1, j = 0, k = 0;
+	
+    do {
+	i++;
 
-            for (int a = j, b = 0;a < i;a++, b++) {
-                subString[b] = string[a];
+	if (string[i] == delimiter || string[i] == '\0') {
+	    char *subString = malloc(sizeof(char) * 20); //subString = max length of individual words
+
+	    for (int a = j, b = 0; a <= i; a++, b++) {
+                
+		if (a == i) {
+		    subString[b] = '\0';
+		}
+		else {
+		    subString[b] = string[a];
+		}
+		
             }
 
             words[k] = subString;
             k++;
             j = i + 1;
+			
         }
 
-        i++;
-    }
+	} while (string[i] != '\0');
 
-    int stringLength = strlen(stringLength);
-    char *subString;
-
-    for (int a = j, b = 0;a < stringLength;a++, b++) {
-        subString[b] = string[a];
-    }
-
-    words[k] = subString;
-
-    return words;
 }

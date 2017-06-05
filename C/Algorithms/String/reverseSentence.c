@@ -6,17 +6,20 @@
  * @param char *sentence
  * @return char *
  */
-char * reverseSentence(char *sentence)
+char ** reverseSentence(char *sentence)
 {
-    char **sentenceWords;
+    char *sentenceWords[20]= { NULL };	//sentenceWords = total number of individual words
+    static char *reverseSentence[20];	//reverseSentence = max num of individual words
+    int sentenceWordsLength = sizeof(sentenceWords) / sizeof(char*);
+
     split(sentence, ' ', sentenceWords);
 
-    char *reverseSentence = "";
-    int sentenceWordsLength = sizeof(sentenceWords) / sizeof(sentenceWords[0]);
+    for (int j = sentenceWordsLength - 1, i = 0;j > -1;j--, i++) {
 
-    for (int j = sentenceWordsLength - 1;j > -1;j--) {
-        strcat(reverseSentence, strcat(sentenceWords[j], ' '));
+	if(sentenceWords[j])
+	    reverseSentence[i] = strcat(sentenceWords[j], " ");
+	    
     }
 
     return reverseSentence;
-}
+} //if breakpoint occurs here then input string has surpassed max words
