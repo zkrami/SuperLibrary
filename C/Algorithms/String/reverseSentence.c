@@ -6,16 +6,16 @@
  * @param char *sentence
  * @return char *
  */
-char ** reverseSentence(char *sentence)
+char **reverseSentence(char *sentence) 
 {
-    char *sentenceWords[20]= { NULL };	//sentenceWords = total number of individual words
-    static char *reverseSentence[20];	//reverseSentence = max num of individual words
-    int sentenceWordsLength = sizeof(sentenceWords) / sizeof(char*);
+    char *sentenceWords[20] = {NULL};    //sentenceWords = total number of individual words
+    static char *reverseSentence[20];    //reverseSentence = max num of individual words
+    int sentenceWordsLength = sizeof(sentenceWords) / sizeof(char *);
 
     split(sentence, ' ', sentenceWords);
-    for (int j = sentenceWordsLength - 1, i = 0;j > -1;j--, i++) {
-	    if(sentenceWords[j]){
-	        reverseSentence[i] = strcat(sentenceWords[j], " ");
+    for (int j = sentenceWordsLength - 1, i = 0; j > -1; j--, i++) {
+        if (sentenceWords[j]) {
+            reverseSentence[i] = strcat(sentenceWords[j], " ");
         }
     }
 
