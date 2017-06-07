@@ -13,12 +13,10 @@ char ** reverseSentence(char *sentence)
     int sentenceWordsLength = sizeof(sentenceWords) / sizeof(char*);
 
     split(sentence, ' ', sentenceWords);
-
     for (int j = sentenceWordsLength - 1, i = 0;j > -1;j--, i++) {
-
-	if(sentenceWords[j])
-	    reverseSentence[i] = strcat(sentenceWords[j], " ");
-	    
+	    if(sentenceWords[j]){
+	        reverseSentence[i] = strcat(sentenceWords[j], " ");
+        }
     }
 
     return reverseSentence;
