@@ -5,7 +5,7 @@
  *
  * @param array $array
  * @param mixed $searchingElement
- * @return int|string
+ * @return int
  */
 function linearSearch(array $array, $searchingElement)
 {
@@ -15,5 +15,5 @@ function linearSearch(array $array, $searchingElement)
         }
     }
 
-    return 'Not found';
+    return -1;
 }

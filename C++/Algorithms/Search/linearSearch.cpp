@@ -2,14 +2,14 @@
  * Implements Linear Search algorithm
  *
  * @param array array
- * @param int searchingElement
+ * @param int targetElement
  * @returns int
  */
-int linearSearch(int *array, int searchingElement) {
+int linearSearch(int *array, int targetElement) {
     int arrayLength = sizeof(array) / array[0];
 
     for (int i = 0;i < arrayLength;i++) {
-        if (array[i] == searchingElement) {
+        if (array[i] == targetElement) {
             return i;
         }
     }
